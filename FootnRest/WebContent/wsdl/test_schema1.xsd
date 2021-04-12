@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:tns="http://soap.foot.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://soap.foot.com/" version="1.0">
+<xs:element name="test" type="tns:test"/>
+<xs:element name="testResponse" type="tns:testResponse"/>
+<xs:complexType name="test">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="testResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
