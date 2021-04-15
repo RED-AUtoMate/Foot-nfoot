@@ -4,6 +4,8 @@ import com.foot.rest.models.Teame;
 
 public class TeamService {
 
+	
+	
 	public Teame getTeamById(String id_team) {
 		// TODO Auto-generated method stub
 		return null;

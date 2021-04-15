@@ -16,6 +16,16 @@ import com.foot.rest.services.TeamService;
 @Path("/league/{id}/teams")
 public class TeamRessource {
 
+public void initConnexion() {
+		
+		String url = "";
+		String user = "";
+		String password = "";
+//		Class.forName("com.mysql.jdb.Driver");
+		
+		
+		
+	}
 	
 	private TeamService teamService = new TeamService();
 	

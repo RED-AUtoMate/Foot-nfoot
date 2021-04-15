@@ -6,7 +6,7 @@
     <servlet-class>org.apache.cxf.jaxrs.servlet.CXFNonSpringJaxrsServlet</servlet-class>
     <init-param>
       <param-name>jaxrs.serviceClasses</param-name>
-      <param-value>com.foot.rest.resources.UserAuth</param-value>
+      <param-value>com.foot.rest.resources.LeagueResource,com.foot.rest.resources.TeamRessource</param-value>
     </init-param>
     <init-param>
       <param-name>jaxrs.address</param-name>

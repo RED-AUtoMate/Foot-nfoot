@@ -4,6 +4,7 @@ import com.foot.rest.models.League;
 
 public class LeagueService {
 
+	
 	public League getLeagueById(String id_League) {
 		// TODO Auto-generated method stub
 		return null;
