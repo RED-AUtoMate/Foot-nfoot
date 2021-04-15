@@ -21,7 +21,7 @@ public class AuthenticateFilter implements ContainerRequestFilter {
 	private static final String AUTHORIZATION_HEADER_PREFIX = "Basic";
 	
 	
-
+	
 	@Override
 	public void filter(ContainerRequestContext arg0) throws IOException {
 		
