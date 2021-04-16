@@ -30,3 +30,4 @@ FootnFoot is a service which handle data around major football championships and
 ### The database
 the relation between our entities is simple : a league contains multiples teams, and a team may contains multiple players.
 User is an isolated entity, we use it for authentification to handle the access rights.
+<img src="https://www.safetymarking.ch/fr/images/600/112856/panneau-d-indication-pour-protection-contre-l-incendie-fsd.jpg">
