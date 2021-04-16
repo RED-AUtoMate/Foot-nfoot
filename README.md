@@ -30,4 +30,4 @@ FootnFoot is a service which handle data around major football championships and
 ### The database
 the relation between our entities is simple : a league contains multiples teams, and a team may contains multiple players.
 User is an isolated entity, we use it for authentification to handle the access rights.
-<img src="https://github.com/RED-AUtoMate/Foot-nfoot/blob/fdc028821dbc8e5ddf94f0c38549a99c797a9ca8/bdd.PNG">
+<img src="https://github.com/RED-AUtoMate/Foot-nfoot/blob/fdc028821dbc8e5ddf94f0c38549a99c797a9ca8/MCD.PNG">
