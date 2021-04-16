@@ -27,3 +27,6 @@ FootnFoot is a service which handle data around major football championships and
     POST / : create a User with an object passed in parameters
     PUT /{id_User} : Update the User with id "id_User" with the User object passed in parameter
     DELETE /{id_User} : delete the User with the id "id_User"
+### The database
+the relation between our entities is simple : a league contains multiples teams, and a team may contains multiple players.
+User is an isolated entity, we use it for authentification to handle the access rights.
