@@ -1,17 +1,14 @@
 package com.foot.rest.resources;
 
-<<<<<<< HEAD
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
-=======
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
->>>>>>> origin/main
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -23,6 +20,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import com.foot.rest.controls.DB;
 import com.foot.rest.models.League;
 import com.foot.rest.services.LeagueService;
 
@@ -48,25 +46,13 @@ public class LeagueResource {
 
 	private LeagueService leagueService = new LeagueService();
 	
-public void initConnexion() {
+public void initConnexion() throws SQLException {
 		
 		String url = "jdbc:mysql://localhost::3306/ws2";
 		String user = "root";
 		String password = "";
-		try {
-			System.out.println("avant");
-			Class.forName("com.mysql.jdb.Driver");
-			System.out.println("pendant");
-			Connection connexion = DriverManager.getConnection(url, user, password);
-			System.out.println("apres");
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
+		DB a = new DB();
 		
 		
 	}
@@ -76,7 +62,12 @@ public void initConnexion() {
 	@Produces(MediaType.APPLICATION_XML)
 	public String getLeagueById(@PathParam("id_league") String id_league ){
 		System.out.println("test");
-		initConnexion();
+		try {
+			initConnexion();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 //		return leagueService.getLeagueById(id_league);
 		return "reussite";
 	}
