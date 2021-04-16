@@ -22,7 +22,7 @@ FootnFoot is a service which handle data around major football championships and
     POST / : create a Player with an object passed in parameters
     PUT /{id_player} : Update the Player with id "id_Player" with the Player object passed in parameter
     DELETE /{id_player} : delete the Player with the id "id_Player"
-* User : /auth
+* User : /users
     GET /{id_User} : get the User the the id "id_User"
     POST / : create a User with an object passed in parameters
     PUT /{id_User} : Update the User with id "id_User" with the User object passed in parameter
