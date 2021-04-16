@@ -16,25 +16,17 @@ import com.foot.rest.services.TeamService;
 @Path("/league/{id}/teams")
 public class TeamRessource {
 
-public void initConnexion() {
-		
-		String url = "";
-		String user = "";
-		String password = "";
-//		Class.forName("com.mysql.jdb.Driver");
-		
-		
-		
-	}
 	
 	private TeamService teamService = new TeamService();
 	
 	@Path("/{id_team}")
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
-	public Teame getTeamById(@PathParam("id_team") String id_team ){
+	public Teame getTeamById(@PathParam("id_team") int id_team ){
+		
 		
 		return teamService.getTeamById(id_team);
+		
 	}
 	
 	@Path("/")
@@ -48,7 +40,7 @@ public void initConnexion() {
 	@Path("/{id_team}")
 	@PUT
 	@Consumes(MediaType.APPLICATION_XML)
-	public void updateTeam(@PathParam("id_team") String id_team, Teame team) {
+	public void updateTeam(@PathParam("id_team") int id_team, Teame team) {
 		teamService.updateTeam(id_team,team);
 	}
 	
@@ -56,7 +48,7 @@ public void initConnexion() {
 	@DELETE
 	@Consumes(MediaType.APPLICATION_XML)
 	public void deleteTeam(@PathParam("id_team") String id_team) {
-		teamService.deleteLeague(id_team);
+		teamService.deleteTeame(id_team);
 	}
 	
 	

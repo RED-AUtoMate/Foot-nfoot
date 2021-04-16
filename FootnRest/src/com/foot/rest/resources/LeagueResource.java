@@ -9,6 +9,8 @@ import javax.ws.rs.core.Response.Status;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -52,7 +54,14 @@ public void initConnexion() throws SQLException {
 		String user = "root";
 		String password = "";
 		
-		DB a = new DB();
+		DB a = DB.getInstance();
+		HashMap< String,String> ab = new HashMap<String, String>();
+		ab.put("hhhh1", "hhh1");
+		ab.put("hhhh2", "hhh2");
+		ab.put("hhhh3", "hhh3");
+		ab.put("hhhh4", "hhh4");
+		a.insert("hhhh",ab);
+		
 		
 		
 	}
