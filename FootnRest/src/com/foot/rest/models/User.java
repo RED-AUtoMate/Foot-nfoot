@@ -5,27 +5,33 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class User {
 	private int id;
-	private String name;
-	private String fname;
-	private String email;
+	private String LastName;
+	private String FirsName;
+	private String Email;
 	private String password;
-	public String getName() {
-		return name;
+	public int getId() {
+		return id;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public String getFname() {
-		return fname;
+	public String getLastName() {
+		return LastName;
 	}
-	public void setFname(String fname) {
-		this.fname = fname;
+	public void setLastName(String lastName) {
+		LastName = lastName;
+	}
+	public String getFirsName() {
+		return FirsName;
+	}
+	public void setFirsName(String firsName) {
+		FirsName = firsName;
 	}
 	public String getEmail() {
-		return email;
+		return Email;
 	}
 	public void setEmail(String email) {
-		this.email = email;
+		Email = email;
 	}
 	public String getPassword() {
 		return password;
@@ -34,15 +40,4 @@ public class User {
 		this.password = password;
 	}
 	
-	@Override
-	public String toString() {
-		return this.getEmail()+"::"+this.getPassword();
-	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-
 }

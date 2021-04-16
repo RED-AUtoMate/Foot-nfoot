@@ -9,6 +9,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
 
 import com.foot.rest.models.Teame;
 import com.foot.rest.services.TeamService;
@@ -16,47 +18,68 @@ import com.foot.rest.services.TeamService;
 @Path("/league/{id}/teams")
 public class TeamRessource {
 
-public void initConnexion() {
-		
-		String url = "";
-		String user = "";
-		String password = "";
-//		Class.forName("com.mysql.jdb.Driver");
-		
-		
-		
-	}
 	
 	private TeamService teamService = new TeamService();
 	
 	@Path("/{id_team}")
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
-	public Teame getTeamById(@PathParam("id_team") String id_team ){
+	public Response getTeamById(@PathParam("id_team") int id_team ){	
+		/*link HATEOS*/
 		
-		return teamService.getTeamById(id_team);
+		if(teamService.getTeamById(id_team) != null) {
+			Response rs = Response.status(Status.OK)
+					.entity(teamService.getTeamById(id_team))
+					.build();
+			return rs;
+		}else 
+			
+		return Response.status(Status.NOT_FOUND).build();
+		
+		
 	}
 	
 	@Path("/")
 	@POST
 	@Consumes(MediaType.APPLICATION_XML)
-	public void createTeam(Teame team) {
+	@Produces(MediaType.APPLICATION_XML)
+	public Response createTeam(Teame team) {
+		
+		
+		/*ADD links H HATEOS*/
 		teamService.createTeam(team);
+		
+		Response rs = Response.status(Status.CREATED)
+				.entity(team)
+				.build();
+		return rs;
+		
+		
 		
 	}
 	
 	@Path("/{id_team}")
 	@PUT
 	@Consumes(MediaType.APPLICATION_XML)
-	public void updateTeam(@PathParam("id_team") String id_team, Teame team) {
+	public Response updateTeam(@PathParam("id_team") int id_team, Teame team) {
 		teamService.updateTeam(id_team,team);
+		/*link HATEOS*/
+		Response rs = Response.status(Status.CREATED)
+				.entity(team)
+				.build();
+		return rs;
 	}
 	
 	@Path("/{id_team}")
 	@DELETE
 	@Consumes(MediaType.APPLICATION_XML)
-	public void deleteTeam(@PathParam("id_team") String id_team) {
-		teamService.deleteLeague(id_team);
+	public Response deleteTeam(@PathParam("id_team") int id_team) {
+		
+		
+		Response rs = Response.status(Status.OK)
+				.entity(teamService.deleteTeame(id_team))
+				.build();
+		return rs;
 	}
 	
 	
