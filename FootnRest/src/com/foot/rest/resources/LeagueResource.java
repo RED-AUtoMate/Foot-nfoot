@@ -54,15 +54,7 @@ public void initConnexion() throws SQLException {
 		String user = "root";
 		String password = "";
 		
-		DB a = DB.getInstance();
-		HashMap< String,String> ab = new HashMap<String, String>();
-		ab.put("hhhh1", "hhh1");
-		ab.put("hhhh2", "hhh2");
-		ab.put("hhhh3", "hhh3");
-		ab.put("hhhh4", "hhh4");
-		a.insert("hhhh",ab);
-		
-		
+		DB a = DB.getInstance();	
 		
 	}
 	
@@ -91,14 +83,14 @@ public void initConnexion() throws SQLException {
 	@Path("/{id_league}")
 	@PUT
 	@Consumes(MediaType.APPLICATION_XML)
-	public void updateLeague(@PathParam("id_league") String id_league, League league ){
+	public void updateLeague(@PathParam("id_league") int id_league, League league ){
 		leagueService.updateLeague(id_league,league);
 	}
 	
 	@Path("/{id_league}")
 	@DELETE
 	@Consumes(MediaType.APPLICATION_XML)
-	public void deleteLeague(@PathParam("id_league") String id_league ){
+	public void deleteLeague(@PathParam("id_league") int id_league ){
 		leagueService.deleteLeague(id_league);
 	}
 

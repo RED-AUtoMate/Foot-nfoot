@@ -47,17 +47,18 @@ public class TeamService {
 	
 	public String createTeam(Teame team) {
 		
-		String query = "INSERT INTO Teams (team_name, classment, pts, bp, bc, league, last_result) VALUES (?,?,?,?,?,?,?)";
+		String query = "INSERT INTO Teams (ID, team_name, classment, pts, bp, bc, league, last_result) VALUES (?,?,?,?,?,?,?,?)";
 		
 		try {
 			PreparedStatement st = db.getConnection().prepareStatement(query);
-			st.setString(1, team.getTeam_name());
-			st.setInt(2, team.getClassment());
-			st.setInt(3, team.getPts());
-			st.setInt(4, team.getBp());
-			st.setInt(5, team.getBc());
-			st.setInt(6, team.getLeague());
-			st.setString(7, team.getLast_result());
+			st.setInt(1, team.getId());
+			st.setString(2, team.getTeam_name());
+			st.setInt(3, team.getClassment());
+			st.setInt(4, team.getPts());
+			st.setInt(5, team.getBp());
+			st.setInt(6, team.getBc());
+			st.setInt(7, team.getLeague());
+			st.setString(8, team.getLast_result());
 			
 			if(st.executeUpdate() > 0) {
 				return "Teame created successfully";
@@ -93,16 +94,34 @@ public class TeamService {
 			
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
 		return "Error while updating team";
 	}
+	
+	
+	
 
-	public void deleteTeame(String id_team) {
+	public String deleteTeame(int id_team) {
+		String query = "DELETE FROM Teams WHERE ID = ?";
 		
+		try {
+			
+			PreparedStatement st = db.getConnection().prepareStatement(query);
+			st.setInt(1, id_team);
+			
+			if(st.executeUpdate() > 0) {
+				return "Teame Deleted successfully";
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return "Error while deleting resource";
 		
 	}
+	
 
 }
