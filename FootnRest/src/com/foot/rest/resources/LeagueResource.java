@@ -9,6 +9,7 @@ import javax.ws.rs.core.Response.Status;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,6 +21,7 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
 
 import com.foot.rest.controls.DB;
@@ -32,66 +34,63 @@ import com.foot.rest.services.LeagueService;
 @Path("/leagues")
 public class LeagueResource {
 	
-
-	@Path("{code}")
-	@GET
-	public Response getLeague(@PathParam("code") String code) {
-		
-		return Response.status(Status.OK).build();
-		
-	}
-	
-	
-	
-	
-	
-
 	private LeagueService leagueService = new LeagueService();
 	
-public void initConnexion() throws SQLException {
-		
-		String url = "jdbc:mysql://localhost::3306/ws2";
-		String user = "root";
-		String password = "";
-		
-		DB a = DB.getInstance();	
-		
-	}
 	
-	@Path("/{id_league}")
+	@Path("/")
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
-	public String getLeagueById(@PathParam("id_league") String id_league ){
-		System.out.println("test");
-		try {
-			initConnexion();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-//		return leagueService.getLeagueById(id_league);
-		return "reussite";
+	public Response getAllLeagues() {
+		ArrayList<League> leagues = leagueService.getAllLeagues();
+		return Response.status(Status.OK).
+				entity(new GenericEntity<ArrayList<League>>(leagues) {})
+				.build();		
 	}
+	
+	
+	@Path("{code}")
+	@GET
+	@Produces(MediaType.APPLICATION_XML)
+	public Response getLeague(@PathParam("code") String code) {
+		
+		League l = leagueService.getLeagueByCode(code);
+		return Response.status(Status.OK)
+				.entity(l)
+				.build();
+	}
+	
 	
 	@Path("/")
 	@POST
 	@Consumes(MediaType.APPLICATION_XML)
-	public void createLeague(League league) {
-		leagueService.createLeague(league);
+	@Produces(MediaType.APPLICATION_XML)
+	public Response createLeague(League league) {
+		League l = leagueService.createLeague(league);
+		return Response.status(Status.CREATED).entity(l).build();
 	}
 	
-	@Path("/{id_league}")
+	
+	@Path("/{code}")
 	@PUT
 	@Consumes(MediaType.APPLICATION_XML)
-	public void updateLeague(@PathParam("id_league") int id_league, League league ){
-		leagueService.updateLeague(id_league,league);
+	@Produces(MediaType.APPLICATION_XML)
+	public Response updateLeague(@PathParam("code") String code, League league ){
+		League l = leagueService.updateLeague(code,league);
+		return Response.status(Status.OK).entity(l).build();
+		
 	}
+	
 	
 	@Path("/{id_league}")
 	@DELETE
 	@Consumes(MediaType.APPLICATION_XML)
-	public void deleteLeague(@PathParam("id_league") int id_league ){
-		leagueService.deleteLeague(id_league);
+	public Response deleteLeague(@PathParam("id_league") String id_league ){
+		
+		
+		if(leagueService.deleteLeague(id_league) == 0) {
+			return Response.status(Status.OK).build();
+		}
+		return Response.status(Status.NOT_MODIFIED).build();
 	}
 
 
