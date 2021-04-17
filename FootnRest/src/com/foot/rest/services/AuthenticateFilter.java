@@ -1,4 +1,4 @@
-package com.foot.rest.resources;
+package com.foot.rest.services;
 
 
 import java.io.IOException;

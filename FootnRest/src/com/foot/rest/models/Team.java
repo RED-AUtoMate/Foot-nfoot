@@ -3,7 +3,7 @@ package com.foot.rest.models;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class Teame {
+public class Team {
 	
 	private int id;
 	private String team_name;

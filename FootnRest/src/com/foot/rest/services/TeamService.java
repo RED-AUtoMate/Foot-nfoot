@@ -3,17 +3,53 @@ package com.foot.rest.services;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import com.foot.rest.controls.DB;
-import com.foot.rest.models.Teame;
+import com.foot.rest.models.Team;
 
 public class TeamService {
 	
 	private DB db = DB.getInstance();
 
 	
+	public ArrayList<Team> getAllTeams(String league_code){
+		
+		ArrayList<Team> teams = new ArrayList<Team>();
+		String query = "SELECT * FROM Teams WHERE league = (SELECT ID FROM Leagues where league_code = ?)";
+		
+		
+		try {
+			PreparedStatement st = this.db.getConnection().prepareStatement(query);
+			st.setString(1, league_code);
+			ResultSet rs = st.executeQuery();
+			
+			while(rs.next()) {
+				Team tm = new Team();
+				
+				tm.setBc(rs.getInt("bc"));
+				tm.setBp(rs.getInt("bp"));
+				tm.setClassment(rs.getInt("classment"));
+				tm.setId(rs.getInt("ID"));
+				tm.setLast_result(rs.getString("last_result"));
+				tm.setLeague(rs.getInt("league"));
+				tm.setPts(rs.getInt("pts"));
+				tm.setTeam_name(rs.getString("team_name"));
+				
+				teams.add(tm);
+			}
+			return teams;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+				
+		return null;
+	}
 	
-	public Teame getTeamById(int id_team) {
+	
+	public Team getTeamById(int id_team) {
 		String query = "SELECT * FROM Teams WHERE ID = ?";
 		
 		try {
@@ -22,7 +58,7 @@ public class TeamService {
 			ResultSet rs = st.executeQuery();
 			
 			if(rs.next()) {
-				Teame tm = new Teame();
+				Team tm = new Team();
 				
 				tm.setBc(rs.getInt("bc"));
 				tm.setBp(rs.getInt("bp"));
@@ -45,7 +81,7 @@ public class TeamService {
 	
 	
 	
-	public String createTeam(Teame team) {
+	public Team createTeam(Team team) {
 		
 		String query = "INSERT INTO Teams (ID, team_name, classment, pts, bp, bc, league, last_result) VALUES (?,?,?,?,?,?,?,?)";
 		
@@ -61,7 +97,7 @@ public class TeamService {
 			st.setString(8, team.getLast_result());
 			
 			if(st.executeUpdate() > 0) {
-				return "Teame created successfully";
+				return team;
 			}
 			
 			
@@ -71,10 +107,10 @@ public class TeamService {
 		}
 		
 		
-		return "Error while creating team";
+		return null;
 	}
 
-	public String updateTeam(int id_team, Teame team) {
+	public Team updateTeam(int id_team, Team team) {
 		String query = "UPDATE Teams SET team_name = ?, classment = ?, pts = ?, bp = ?, bc = ?, league = ?, last_result = ? WHERE ID = ?";
 		
 		try {
@@ -89,7 +125,7 @@ public class TeamService {
 			st.setInt(8, id_team);
 			
 			if(st.executeUpdate() > 0) {
-				return "Teame updated successfully";
+				return team;
 			}
 			
 			
@@ -97,7 +133,7 @@ public class TeamService {
 			e.printStackTrace();
 		}
 		
-		return "Error while updating team";
+		return null;
 	}
 	
 	
