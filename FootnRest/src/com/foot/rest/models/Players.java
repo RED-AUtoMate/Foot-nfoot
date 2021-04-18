@@ -1,5 +1,8 @@
 package com.foot.rest.models;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Players {
 	int ID;
 	String LastName;

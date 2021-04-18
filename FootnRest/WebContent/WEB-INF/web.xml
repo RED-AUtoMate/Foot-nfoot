@@ -10,7 +10,7 @@
 		
 		<init-param>
 			<param-name>jaxrs.serviceClasses</param-name>
-			<param-value>com.foot.rest.resources.LeagueResource,com.foot.rest.resources.TeamRessource,</param-value>
+			<param-value>com.foot.rest.resources.LeagueResource</param-value>
 		</init-param>
 
 		
