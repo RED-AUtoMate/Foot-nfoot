@@ -3,7 +3,10 @@
 	<name>FootnRest</name>
 	<comment></comment>
 	<projects>
+<<<<<<< HEAD
 		<project>FootnSoap</project>
+=======
+>>>>>>> f1cd1745d808e5609598b9abac15315ced39a5fe
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -42,6 +42,7 @@ public class LeagueResource {
 	private TeamService teamService = new TeamService();
 	private PlayerService playerService = new PlayerService();
 
+	/* Leagues */
 	
 	
 	@Path("/")
@@ -101,7 +102,7 @@ public class LeagueResource {
 	}
 	
 	
-	
+	/* Teams */
 	
 	@Path("/{code}/teams")
 	@GET
@@ -149,7 +150,8 @@ public class LeagueResource {
 		
 	}
 	
-	@Path("/{code}/{id_team}")
+	
+	@Path("/{code}/teams/{id_team}")
 	@PUT
 	@Consumes(MediaType.APPLICATION_XML)
 	public Response updateTeam(@PathParam("id_team") int id_team, Team team) {
@@ -162,7 +164,7 @@ public class LeagueResource {
 	}
 	
 	
-	@Path("/{code}/{id_team}")
+	@Path("/{code}/teams/{id_team}")
 	@DELETE
 	@Consumes(MediaType.APPLICATION_XML)
 	public Response deleteTeam(@PathParam("id_team") int id_team) {

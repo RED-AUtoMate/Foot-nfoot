@@ -8,6 +8,7 @@ import com.foot.rest.models.Team;
 
 public interface EndpointInterface {
 
+
     public ArrayList<League>getAllLeagues();
     public League getLeague(String league_code);
     public League createLeague(League league);

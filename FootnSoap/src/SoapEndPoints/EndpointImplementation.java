@@ -8,6 +8,7 @@ import com.foot.rest.models.Team;
 
 public class EndpointImplementation implements EndpointInterface {
 
+
    
    
    public ArrayList<League> getAllLeagues() {
@@ -84,5 +85,6 @@ public class EndpointImplementation implements EndpointInterface {
       // TODO Auto-generated method stub
       return null;
    }
+
 
 }
