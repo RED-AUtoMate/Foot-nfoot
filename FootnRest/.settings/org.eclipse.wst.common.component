@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+<<<<<<< HEAD
             
     
     <wb-module deploy-name="FootnRest-0.0.1-SNAPSHOT">
@@ -22,4 +23,13 @@
     </wb-module>
         
 
+=======
+    <wb-module deploy-name="FootnRest-0.0.1-SNAPSHOT">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="FootnRest"/>
+        <property name="java-output-path" value="/FootnRest/build/classes"/>
+    </wb-module>
+>>>>>>> f1cd1745d808e5609598b9abac15315ced39a5fe
 </project-modules>
