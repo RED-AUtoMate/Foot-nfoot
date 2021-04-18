@@ -4,6 +4,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class User {
+
 	private int id;
 	private String LastName;
 	private String FirsName;
@@ -32,6 +33,7 @@ public class User {
 	}
 	public void setEmail(String email) {
 		Email = email;
+
 	}
 	public String getPassword() {
 		return password;
@@ -39,6 +41,7 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", LastName=" + LastName + ", FirsName=" + FirsName + ", Email=" + Email
@@ -46,4 +49,6 @@ public class User {
 	}
 	
 	
+
+
 }
