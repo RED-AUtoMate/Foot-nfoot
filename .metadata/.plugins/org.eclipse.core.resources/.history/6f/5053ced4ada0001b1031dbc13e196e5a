@@ -1,0 +1,96 @@
+package Soap.EndPoints;
+
+import java.util.ArrayList;
+
+
+
+import com.foot.rest.models.League;
+import com.foot.rest.models.Players;
+import com.foot.rest.models.Team;
+import com.foot.rest.services.LeagueService;
+import com.foot.rest.services.PlayerService;
+import com.foot.rest.services.TeamService;
+
+public class EndpointImplementation {
+
+	private LeagueService leagueService = new LeagueService();
+	private TeamService teamService = new TeamService();
+	private PlayerService playerService = new PlayerService();
+   
+   
+   public ArrayList<League> getAllLeagues() {
+	   return leagueService.getAllLeagues();
+   }
+
+   public League getLeague(String league_code) {
+      
+      return leagueService.getLeagueByCode(league_code);
+   }
+
+   public League createLeague(League league) {
+      
+      return leagueService.createLeague(league);
+   }
+
+   public League updateLeague(String league_code, League league) {
+	   
+      return leagueService.updateLeague(league_code, league);
+   }
+
+   public String deleteLeague(String league_code) {
+      
+      return leagueService.deleteLeague(league_code) == 0 ? "Teame deleted"  : "Not deleted";
+   }
+
+   public ArrayList<Team> getAllTeams(String league_code) {
+      
+
+      return teamService.getAllTeams(league_code);
+   }
+
+   public Team getTeamById(int id_team) {
+	   
+      return teamService.getTeamById(id_team);
+   }
+
+   public Team createTeam(Team team, String league_code) {
+	   
+      return teamService.createTeam(team);
+   }
+
+   public Team updateTeam(int id_team, Team team) {
+	   
+      return teamService.updateTeam(id_team, team);
+   }
+
+   public String deleteTeam(int id_team) {
+      
+	      return teamService.deleteTeame(id_team);
+   }
+
+   public ArrayList<Players> getBestPlayersLeague(String league_code) {
+	   
+      return playerService.getBestPlayers(league_code);
+   }
+
+   public Players getBestPlayer(String league_code, String post) {
+
+	   return playerService.getBestPlayer(league_code, post);
+   }
+
+   public Players addPlayer(String league_code, Players player) {
+
+	   return playerService.addPlayer(player, league_code);
+   }
+
+   public Players updatePlayer(String league_code, String post, Players player) {
+	   
+	   return playerService.updatePlayer(post, league_code, player);
+   }
+
+   public String deletePlayer(String league_code, String post) {
+	   
+      return playerService.deletePlayerByPostAndLeague(post, league_code) == 0 ? "Player deleted": "Player not deleted";
+   }
+
+}

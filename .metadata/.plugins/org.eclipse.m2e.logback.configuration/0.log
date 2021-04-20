@@ -1,0 +1,100 @@
+2021-04-19 03:19:32,511 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-04-19 03:20:06,138 [Worker-3: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: FootnRest:FootnRest:0.0.1-SNAPSHOT @ /media/imadhou/imadhou/WebServices/TPF/FootnRest/pom.xml.
+2021-04-19 03:20:06,253 [Worker-17: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: FootnRest:FootnRest:0.0.1-SNAPSHOT @ /media/imadhou/imadhou/WebServices/TPF/FootnRest/pom.xml.
+2021-04-19 03:20:07,871 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 03:20:07,874 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/main/resources
+2021-04-19 03:20:07,878 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 03:20:07,878 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/test/resources
+2021-04-19 03:20:09,333 [Worker-18: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: FootnRest:FootnRest:0.0.1-SNAPSHOT @ /media/imadhou/imadhou/WebServices/TPF/FootnRest/pom.xml.
+2021-04-19 03:20:26,785 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 03:20:26,786 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/main/resources
+2021-04-19 03:20:26,788 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 03:20:26,788 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/test/resources
+2021-04-19 03:21:15,552 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 03:21:15,553 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/main/resources
+2021-04-19 03:21:15,555 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 03:21:15,555 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/test/resources
+2021-04-19 03:21:18,879 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 03:21:18,879 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/main/resources
+2021-04-19 03:21:18,881 [Worker-8: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 03:21:18,882 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/test/resources
+2021-04-19 03:21:56,054 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 03:21:56,054 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/main/resources
+2021-04-19 03:21:56,056 [Worker-10: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 03:21:56,057 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/test/resources
+2021-04-19 22:28:09,821 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-04-19 22:28:17,844 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 22:28:17,874 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/main/resources
+2021-04-19 22:28:17,877 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 22:28:17,878 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/test/resources
+2021-04-19 22:41:39,300 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-04-19 22:41:43,434 [Worker-4: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 22:41:43,439 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/main/resources
+2021-04-19 22:41:43,443 [Worker-4: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 22:41:43,444 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/test/resources
+2021-04-19 23:43:24,847 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-04-19 23:43:29,228 [Worker-1: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 23:43:29,266 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/main/resources
+2021-04-19 23:43:29,269 [Worker-1: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 23:43:29,270 [Worker-1: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/test/resources
+2021-04-19 23:45:46,991 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 23:45:46,997 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/main/resources
+2021-04-19 23:45:46,999 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 23:45:47,000 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/test/resources
+2021-04-19 23:47:14,479 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 23:47:14,479 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/main/resources
+2021-04-19 23:47:14,481 [Worker-11: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 23:47:14,481 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/test/resources
+2021-04-19 23:48:37,197 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 23:48:37,198 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/main/resources
+2021-04-19 23:48:37,200 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-19 23:48:37,203 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/test/resources
+2021-04-20 01:20:39,950 [Worker-40: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-20 01:20:39,951 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/main/resources
+2021-04-20 01:20:39,952 [Worker-40: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-20 01:20:39,953 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/FootnRest/src/test/resources
+2021-04-20 03:12:00,573 [Worker-53: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: SoapEndFoot:SoapEndFoot:0.0.1-SNAPSHOT @ /media/imadhou/imadhou/WebServices/TPF/SoapEndFoot/pom.xml.
+2021-04-20 03:12:01,943 [Worker-53: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SoapEndFoot/src
+2021-04-20 03:12:01,944 [Worker-53: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /SoapEndFoot/src/test/java because it overlaps with /SoapEndFoot/src
+2021-04-20 03:12:03,315 [Worker-53: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2021-04-20 03:12:03,577 [Worker-53: Enabling Maven Dependency Management] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: SoapEndFoot:SoapEndFoot:0.0.1-SNAPSHOT @ /media/imadhou/imadhou/WebServices/TPF/SoapEndFoot/pom.xml.
+2021-04-20 03:12:04,927 [Worker-53: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SoapEndFoot/src
+2021-04-20 03:12:04,927 [Worker-53: Enabling Maven Dependency Management] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /SoapEndFoot/src/test/java because it overlaps with /SoapEndFoot/src
+2021-04-20 03:12:05,124 [Worker-53: Enabling Maven Dependency Management] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SoapEndFoot
+2021-04-20 03:12:05,140 [Worker-53: Enabling Maven Dependency Management] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2021-04-20 03:12:05,433 [Worker-57: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-20 03:12:05,434 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/SoapEndFoot/src/main/resources
+2021-04-20 03:12:05,436 [Worker-57: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-20 03:12:05,436 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/SoapEndFoot/src/test/resources
+2021-04-20 03:12:05,437 [Worker-57: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SoapEndFoot
+2021-04-20 03:12:05,437 [Worker-57: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SoapEndFoot
+2021-04-20 03:12:05,459 [Worker-57: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-20 03:12:33,822 [Worker-60: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: SoapEndFoot:SoapEndFoot:0.0.1-SNAPSHOT @ /media/imadhou/imadhou/WebServices/TPF/SoapEndFoot/pom.xml.
+2021-04-20 03:12:33,911 [Worker-60: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-20 03:12:33,912 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/SoapEndFoot/src/main/resources
+2021-04-20 03:12:33,914 [Worker-60: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-20 03:12:33,915 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/SoapEndFoot/src/test/resources
+2021-04-20 03:12:33,915 [Worker-60: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SoapEndFoot
+2021-04-20 03:12:33,915 [Worker-60: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SoapEndFoot
+2021-04-20 03:12:33,919 [Worker-60: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-20 03:12:36,523 [Worker-55: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-20 03:12:36,523 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/SoapEndFoot/src/main/resources
+2021-04-20 03:12:36,525 [Worker-55: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-20 03:12:36,526 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/SoapEndFoot/src/test/resources
+2021-04-20 03:12:51,269 [Worker-58: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2021-04-20 03:12:51,530 [Worker-58: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: SoapEndFoot:SoapEndFoot:0.0.1-SNAPSHOT @ /media/imadhou/imadhou/WebServices/TPF/SoapEndFoot/pom.xml.
+2021-04-20 03:12:51,630 [Worker-58: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /SoapEndFoot/src
+2021-04-20 03:12:51,631 [Worker-58: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /SoapEndFoot/src/test/java because it overlaps with /SoapEndFoot/src
+2021-04-20 03:12:52,288 [Worker-58: Updating Maven Project] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for SoapEndFoot
+2021-04-20 03:12:52,291 [Worker-58: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2021-04-20 03:12:52,543 [Worker-55: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-20 03:12:52,543 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/SoapEndFoot/src/main/resources
+2021-04-20 03:12:52,544 [Worker-55: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-20 03:12:52,545 [Worker-55: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/SoapEndFoot/src/test/resources
+2021-04-20 03:12:52,545 [Worker-55: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of SoapEndFoot
+2021-04-20 03:12:52,545 [Worker-55: Building] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for SoapEndFoot
+2021-04-20 03:12:52,548 [Worker-55: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-20 03:13:31,236 [Worker-60: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-20 03:13:31,237 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/SoapEndFoot/src/main/resources
+2021-04-20 03:13:31,240 [Worker-60: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-04-20 03:13:31,241 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /media/imadhou/imadhou/WebServices/TPF/SoapEndFoot/src/test/resources

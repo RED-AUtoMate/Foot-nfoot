@@ -1,0 +1,5 @@
+package foot.soap.endpoints;
+
+public class EndpointImplementation {
+
+}

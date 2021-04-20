@@ -1,0 +1,123 @@
+package foot.soap.services;
+
+import java.sql.PreparedStatement;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+
+import foot.soap.controls.DB;
+import foot.soap.models.League;
+
+public class LeagueService {
+	
+	DB db = DB.getInstance();
+
+	
+	public League getLeagueByCode(String league_code) {
+		String query = "SELECT * FROM Leagues WHERE league_code = ?";
+		try {
+			
+			PreparedStatement st = db.getConnection().prepareStatement(query);
+			st.setString(1, league_code);
+			ResultSet rs = st.executeQuery();
+			if(rs.next()) {
+				League league = new League();
+				league.setId(rs.getInt("ID"));
+				league.setLeague_code(rs.getString("league_code"));
+				league.setLeague_country(rs.getString("league_country"));
+				league.setLeague_name(rs.getString("league_name"));
+				
+				return league;
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public League createLeague(League league) {
+		
+		String reqest = "INSERT INTO Leagues (league_code, league_country, league_name) VALUES(?,?,?)";
+		try {
+			PreparedStatement st = db.getConnection().prepareStatement(reqest);
+			st.setString(1, league.getLeague_code());
+			st.setString(2, league.getLeague_country());
+			st.setString(3, league.getLeague_name());
+			
+			st.executeUpdate();
+			return this.getLeagueByCode(league.getLeague_code());
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public League updateLeague(String id_League, League league) {
+		
+		String reqest = "UPDATE Leagues SET league_name = ?, league_code = ?, league_country = ? WHERE league_code = ?";
+		try {
+			PreparedStatement st = db.getConnection().prepareStatement(reqest);
+			st.setString(1, league.getLeague_name());
+			st.setString(2, league.getLeague_code());
+			st.setString(3, league.getLeague_country());	
+			st.setString(4, id_League);
+			st.execute();
+			return this.getLeagueByCode(league.getLeague_code());
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+	
+	
+
+	public int deleteLeague(String id_League) {
+		String reqest = "DELETE FROM Leagues where league_code = ?";
+		int c = -1;
+		try {
+			PreparedStatement st = db.getConnection().prepareStatement(reqest);
+			st.setString(1, id_League);
+			if(st.executeUpdate() > 0) {
+				c =  0;
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return c;
+	}
+	
+	public ArrayList<League> getAllLeagues(){
+		System.out.println("lgssssssss");
+		ArrayList<League> leagues = new ArrayList<League>();
+		String query = "SELECT * FROM Leagues";
+		try {
+			Statement st = db.getConnection().createStatement();
+			ResultSet rs = st.executeQuery(query);
+			
+			while(rs.next()){
+				League league = new League();
+				league.setId(rs.getInt("ID"));
+				System.out.println(league.getId());
+				league.setLeague_code(rs.getString("league_code"));
+				league.setLeague_country(rs.getString("league_country"));
+				league.setLeague_name(rs.getString("league_name"));
+				leagues.add(league);
+			}
+			return leagues;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+
+}

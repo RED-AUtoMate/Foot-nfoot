@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:tns="http://endpoints.soap.foot/" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://endpoints.soap.foot/" version="1.0">
+<xs:element name="addPlayer" type="tns:addPlayer"/>
+<xs:element name="addPlayerResponse" type="tns:addPlayerResponse"/>
+<xs:element name="createLeague" type="tns:createLeague"/>
+<xs:element name="createLeagueResponse" type="tns:createLeagueResponse"/>
+<xs:element name="createTeam" type="tns:createTeam"/>
+<xs:element name="createTeamResponse" type="tns:createTeamResponse"/>
+<xs:element name="deleteLeague" type="tns:deleteLeague"/>
+<xs:element name="deleteLeagueResponse" type="tns:deleteLeagueResponse"/>
+<xs:element name="deletePlayer" type="tns:deletePlayer"/>
+<xs:element name="deletePlayerResponse" type="tns:deletePlayerResponse"/>
+<xs:element name="deleteTeam" type="tns:deleteTeam"/>
+<xs:element name="deleteTeamResponse" type="tns:deleteTeamResponse"/>
+<xs:element name="getAllLeagues" type="tns:getAllLeagues"/>
+<xs:element name="getAllLeaguesResponse" type="tns:getAllLeaguesResponse"/>
+<xs:element name="getAllTeams" type="tns:getAllTeams"/>
+<xs:element name="getAllTeamsResponse" type="tns:getAllTeamsResponse"/>
+<xs:element name="getBestPlayer" type="tns:getBestPlayer"/>
+<xs:element name="getBestPlayerResponse" type="tns:getBestPlayerResponse"/>
+<xs:element name="getBestPlayersLeague" type="tns:getBestPlayersLeague"/>
+<xs:element name="getBestPlayersLeagueResponse" type="tns:getBestPlayersLeagueResponse"/>
+<xs:element name="getLeague" type="tns:getLeague"/>
+<xs:element name="getLeagueResponse" type="tns:getLeagueResponse"/>
+<xs:element name="getTeamById" type="tns:getTeamById"/>
+<xs:element name="getTeamByIdResponse" type="tns:getTeamByIdResponse"/>
+<xs:element name="league" type="tns:league"/>
+<xs:element name="players" type="tns:players"/>
+<xs:element name="team" type="tns:team"/>
+<xs:element name="updateLeague" type="tns:updateLeague"/>
+<xs:element name="updateLeagueResponse" type="tns:updateLeagueResponse"/>
+<xs:element name="updatePlayer" type="tns:updatePlayer"/>
+<xs:element name="updatePlayerResponse" type="tns:updatePlayerResponse"/>
+<xs:element name="updateTeam" type="tns:updateTeam"/>
+<xs:element name="updateTeamResponse" type="tns:updateTeamResponse"/>
+<xs:complexType name="getAllTeams">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getAllTeamsResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:team"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="team">
+    <xs:sequence>
+      <xs:element name="bc" type="xs:int"/>
+      <xs:element name="bp" type="xs:int"/>
+      <xs:element name="classment" type="xs:int"/>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element minOccurs="0" name="last_result" type="xs:string"/>
+      <xs:element name="league" type="xs:int"/>
+      <xs:element name="pts" type="xs:int"/>
+      <xs:element minOccurs="0" name="team_name" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getBestPlayer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getBestPlayerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:players"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="players">
+    <xs:sequence>
+      <xs:element name="age" type="xs:int"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element name="ID" type="xs:int"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element name="player_league" type="xs:int"/>
+      <xs:element name="player_team" type="xs:int"/>
+      <xs:element minOccurs="0" name="post" type="xs:string"/>
+      <xs:element name="score" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="deleteTeam">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="deleteTeamResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="createTeam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:team"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="createTeamResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:team"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getLeague">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getLeagueResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:league"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="league">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element minOccurs="0" name="league_code" type="xs:string"/>
+      <xs:element minOccurs="0" name="league_country" type="xs:string"/>
+      <xs:element minOccurs="0" name="league_name" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updateTeam">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg1" type="tns:team"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updateTeamResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:team"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getTeamById">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getTeamByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:team"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="deleteLeague">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="deleteLeagueResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updateLeague">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="tns:league"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updateLeagueResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:league"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getBestPlayersLeague">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getBestPlayersLeagueResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:players"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="deletePlayer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="deletePlayerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="createLeague">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:league"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="createLeagueResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:league"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getAllLeagues">
+    <xs:sequence/>
+  </xs:complexType>
+<xs:complexType name="getAllLeaguesResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:league"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="addPlayer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="tns:players"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="addPlayerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:players"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updatePlayer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="tns:players"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updatePlayerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:players"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
