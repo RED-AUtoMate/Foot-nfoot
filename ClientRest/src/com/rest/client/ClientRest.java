@@ -39,7 +39,7 @@ public class ClientRest {
 	
 
 
-	public User createUser(User user, String username, String password) {
+	public User createUser(User user) {
 		String webServiceUrl = "http://localhost:8080/FootnRest/users/signin";
 		WebClient webClient = WebClient.create(webServiceUrl);
 		Response rs = webClient.post(user);
@@ -55,7 +55,7 @@ public class ClientRest {
 		return null	;
 	}
 
-	public User updateUser(User user, String id, String username, String password) {
+	public User updateUser(User user, String id) {
 		String webServiceUrl = "http://localhost:8080/FootnRest/users/signin/" + id;
 		WebClient webClient = WebClient.create(webServiceUrl);
 		Response rs = webClient.put(user);
@@ -71,7 +71,7 @@ public class ClientRest {
 		return null	;
 	}
 
-	public String deleteUser(String id, String username, String password) {
+	public String deleteUser(String id) {
 		String webServiceUrl = "http://localhost:8080/FootnRest/users/signin/" + id;
 		WebClient webClient = WebClient.create(webServiceUrl);
 		Response rs = webClient.delete();
