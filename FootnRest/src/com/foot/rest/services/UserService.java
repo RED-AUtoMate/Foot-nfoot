@@ -21,8 +21,9 @@ public class UserService {
 			st.setString(3, user.getEmail());
 			st.setString(4, user.getPassword());
 			
-			st.execute();
-			return this.select(user.getEmail());			
+			if(st.executeUpdate() > 0) {
+				return this.select(user.getEmail());
+			}
 			
 			
 		} catch (SQLException e) {
@@ -76,8 +77,10 @@ public class UserService {
 			st.setString(5, user.getPassword());
 			st.setInt(6, id_user);
 			
-			st.execute();
+			if(st.executeUpdate() > 0) {
 				return this.select(user.getEmail());
+			}
+				
 			
 			
 			
@@ -98,8 +101,9 @@ public class UserService {
 			PreparedStatement st = db.getConnection().prepareStatement(query);
 			st.setInt(1, id_user);
 			
-			st.execute();
-				return "User Deleted successfully";
+			if(st.executeUpdate() > 0) {
+				return "User deleted  succefully";
+			}
 			
 			
 		} catch (SQLException e) {

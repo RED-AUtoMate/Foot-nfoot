@@ -38,7 +38,9 @@ public class TeamService {
 				
 				teams.add(tm);
 			}
-			return teams;
+			if(teams.size() > 0) {
+				return teams;
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -57,9 +59,8 @@ public class TeamService {
 			st.setInt(1, id_team);
 			ResultSet rs = st.executeQuery();
 			
+			Team tm = new Team();
 			if(rs.next()) {
-				Team tm = new Team();
-				
 				tm.setBc(rs.getInt("bc"));
 				tm.setBp(rs.getInt("bp"));
 				tm.setClassment(rs.getInt("classment"));
@@ -68,9 +69,9 @@ public class TeamService {
 				tm.setLeague(rs.getInt("league"));
 				tm.setPts(rs.getInt("pts"));
 				tm.setTeam_name(rs.getString("team_name"));
-				
+			}
+			if(tm != null) {
 				return tm;
-				
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

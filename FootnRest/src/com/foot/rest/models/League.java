@@ -32,6 +32,11 @@ public class League {
 	public void setLeague_country(String league_country) {
 		this.league_country = league_country;
 	}
+	@Override
+	public String toString() {
+		return "League [id=" + id + ", league_name=" + league_name + ", league_code=" + league_code
+				+ ", league_country=" + league_country + "]";
+	}
 	
 	
 	

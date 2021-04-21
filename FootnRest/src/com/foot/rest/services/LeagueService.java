@@ -21,13 +21,14 @@ public class LeagueService {
 			PreparedStatement st = db.getConnection().prepareStatement(query);
 			st.setString(1, league_code);
 			ResultSet rs = st.executeQuery();
+			League league = new League();
 			if(rs.next()) {
-				League league = new League();
 				league.setId(rs.getInt("ID"));
 				league.setLeague_code(rs.getString("league_code"));
 				league.setLeague_country(rs.getString("league_country"));
 				league.setLeague_name(rs.getString("league_name"));
-				
+			}
+			if(league != null) {
 				return league;
 			}
 			
@@ -46,8 +47,10 @@ public class LeagueService {
 			st.setString(2, league.getLeague_country());
 			st.setString(3, league.getLeague_name());
 			
-			st.executeUpdate();
-			return this.getLeagueByCode(league.getLeague_code());
+			if(st.executeUpdate() >0) {
+				return this.getLeagueByCode(league.getLeague_code());
+			}
+			
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -64,8 +67,10 @@ public class LeagueService {
 			st.setString(2, league.getLeague_code());
 			st.setString(3, league.getLeague_country());	
 			st.setString(4, id_League);
-			st.execute();
-			return this.getLeagueByCode(league.getLeague_code());
+			if (st.executeUpdate() > 0) {
+				return this.getLeagueByCode(league.getLeague_code());
+			}
+			
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -76,21 +81,21 @@ public class LeagueService {
 	
 	
 
-	public int deleteLeague(String id_League) {
+	public String deleteLeague(String id_League) {
 		String reqest = "DELETE FROM Leagues where league_code = ?";
 		int c = -1;
 		try {
 			PreparedStatement st = db.getConnection().prepareStatement(reqest);
 			st.setString(1, id_League);
 			if(st.executeUpdate() > 0) {
-				c =  0;
+				return "League deleted succefully";
 			}
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		
-		return c;
+		return "Error while deleting league";
 	}
 	
 	public ArrayList<League> getAllLeagues(){
@@ -108,7 +113,9 @@ public class LeagueService {
 				league.setLeague_name(rs.getString("league_name"));
 				leagues.add(league);
 			}
-			return leagues;
+			if(leagues.size() >0) {
+				return leagues;
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

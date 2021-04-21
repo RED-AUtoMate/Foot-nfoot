@@ -61,6 +61,11 @@ public class Team {
 	public void setLast_result(String last_result) {
 		this.last_result = last_result;
 	}
+	@Override
+	public String toString() {
+		return "Team [id=" + id + ", team_name=" + team_name + ", classment=" + classment + ", pts=" + pts + ", bp="
+				+ bp + ", bc=" + bc + ", league=" + league + ", last_result=" + last_result + "]";
+	}
 	
 	
 }

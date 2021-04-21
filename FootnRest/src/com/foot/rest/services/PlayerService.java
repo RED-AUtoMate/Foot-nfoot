@@ -21,8 +21,8 @@ public class PlayerService {
 			PreparedStatement st = db.getConnection().prepareStatement(query);
 			st.setInt(1, id);
 			ResultSet rs = st.executeQuery();
+			Players player = new Players();
 			if(rs.next()) {
-				Players player = new Players();
 				player.setLastName(rs.getString("LastName"));
 				player.setFirstName(rs.getString("FirstName"));
 				player.setPost(rs.getString("post"));
@@ -31,6 +31,8 @@ public class PlayerService {
 				player.setPlayer_team(rs.getInt("player_team"));
 				player.setScore(rs.getInt("Score"));
 				player.setID(rs.getInt("ID"));
+			}
+			if(player != null) {
 				return player;
 			}
 		} catch (SQLException e) {
@@ -53,9 +55,9 @@ public class PlayerService {
 			st.setInt(7, player.getScore());
 			st.setString(8,post);
 			st.setString(9, league_code);
-			st.executeUpdate();
-			
-			return this.getPlayerById(player.getID());
+			if(st.executeUpdate() > 0) {
+				return this.getPlayerById(player.getID());
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -82,8 +84,10 @@ public class PlayerService {
 				player.setPlayer_league(rs.getInt("player_league"));
 				player.setPlayer_team(rs.getInt("player_team"));
 				player.setScore(rs.getInt("score"));
-				return player;	
 			}	
+			if(player != null) {
+				return player;
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -111,7 +115,9 @@ public class PlayerService {
 				player.setScore(rs.getInt("score"));
 				players.add(player);	
 			}	
-			return players;
+			if(players.size() > 0) {
+				return players;
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -119,7 +125,7 @@ public class PlayerService {
 		return null;
 	}
 	
-	public int deletePlayerByPostAndLeague(String post, String codeLeague) {
+	public String deletePlayerByPostAndLeague(String post, String codeLeague) {
         String query = "DELETE FROM Players \n" +
                 "WHERE (\n" +
                 "   post = ? AND\n" +
@@ -133,13 +139,13 @@ public class PlayerService {
             st.setString(1, post);
             st.setString(2, codeLeague);
             if(st.executeUpdate() > 0) {
-            	 return 0;
+            	 return "Player deleted succefully";
             }
            
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return -1;
+        return "Error while deleting player";
     }
 	
 	public Players addPlayer (Players player, String leaguecode){
@@ -153,8 +159,9 @@ public class PlayerService {
             st.setInt(5, player.getPlayer_league());
             st.setInt(6, player.getPlayer_team());
             st.setInt(7, player.getScore());
-            st.execute();
-            return this.getBestPlayer(leaguecode, player.getPost());
+            if(st.executeUpdate() > 0) {
+            	 return this.getBestPlayer(leaguecode, player.getPost());
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         } 
