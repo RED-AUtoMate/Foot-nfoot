@@ -2,8 +2,8 @@
 ### The Projet
 This project was created by the Group Redd for the Licence3 course Web Services at  CY Cergy Paris University 
 ### Redd members
-HOUARI Mourtada
-HADDADI Rayane
+HOUARI Mourtada<br>
+HADDADI Rayane<br>
 KASMI Ghilas
 ### The Service
 FootnFoot is a service which handle data around major football championships and professionnal leagues, it allows to add/ get/ modify/ delete different entities in the service's database. the available data in the actual version(v1.0) are :  
