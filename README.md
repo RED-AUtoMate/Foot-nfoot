@@ -3,30 +3,29 @@
 This project was created by the Group Redd for the Licence3 course Web Services at  CY Cergy Paris University 
 ### Redd members
 HOUARI Mourtada : imadhou00@gmail.com <br/>
-HADDADI Rayane : rayanhaddadi1@gmail.com
-KASMI Ghilas : kasmi.ghilas@yahoo.com
+HADDADI Rayane : rayanhaddadi1@gmail.com <br/>
+KASMI Ghilas : kasmi.ghilas@yahoo.com <br/>
 ### The Service
 FootnFoot is a service which handle data around major football championships and professionnal leagues, it allows to add/ get/ modify/ delete different entities in the service's database. the available data in the actual version(v1.0) are :  
 * League : /leagues : 
-    GET /{id_league} : get the league the the id "id_league"
-    POST / : create a league with an object passed in parameters
-    PUT /{id_league} : Update the league with id "id_league" with the league object passed in parameter
+    GET /{id_league} : get the league the the id "id_league" <br/>
+    POST / : create a league with an object passed in parameters <br/>
+    PUT /{id_league} : Update the league with id "id_league" with the league object passed in parameter <br/>
     DELETE /{id_league} : delete the league with the id "id_league"
 * Team : /league/{id_league}/teams
-    GET /{id_team} : get the team the the id "id_team"
-    POST / : create a league with a Team object passed in parameters
-    PUT /{id_team} : Update the team with id "id_team" with the team object passed in parameter
+    GET /{id_team} : get the team the the id "id_team" <br/>
+    POST / : create a league with a Team object passed in parameters <br/>
+    PUT /{id_team} : Update the team with id "id_team" with the team object passed in parameter <br/>
     DELETE /{id_team} : delete the team with the id "id_team"
 * Player : /league/{id_league}/team/{id_team}/players
-    GET /{id_league} : get the Player the the id "id_Player"
-    POST / : create a Player with an object passed in parameters
-    PUT /{id_player} : Update the Player with id "id_Player" with the Player object passed in parameter
+    GET /{id_league} : get the Player the the id "id_Player" <br/>
+    POST / : create a Player with an object passed in parameters <br/>
+    PUT /{id_player} : Update the Player with id "id_Player" with the Player object passed in parameter <br/>
     DELETE /{id_player} : delete the Player with the id "id_Player"
 * User : /auth
-    GET /{id_User} : get the User the the id "id_User"
-    POST / : create a User with an object passed in parameters
-    PUT /{id_User} : Update the User with id "id_User" with the User object passed in parameter
-    DELETE /{id_User} : delete the User with the id "id_User"
+    POST / : create a User with an object passed in parameters <br/>
+    PUT /{id_User} : Update the User with id "id_User" with the User object passed in parameter <br/>
+    DELETE /{id_User} : delete the User with the id "id_User" 
 
 ### Authentification
 
@@ -52,7 +51,7 @@ This project contains two servelets, the first one is containing th user related
 *   String deleteTeamByLeagueAndId(String teamLeagueCode, String idTeam, String username, String password) : delete team with the id 'idTeam' in a specific League "teamLeague"
 *   String convertInputStreamToString(InputStream is) : convert the entity in the response to an xml string and return it
 PS1 : the parameters username and password are used for authentification, without them the request won't work
-PS2 : except "convertInputStreamToString", all the other functions follows 4 categories ( add, update, delete, get) but add update and get act similarely
+PS2 : except "convertInputStreamToString", all the other functions follows 4 categories ( add, update, delete, get) but add update and get act similarely <br/>
     * add/update/get : the functions adding/updating/getting a ressource returns the ressource itself ( an object ) if added/updated/got correctly, otherwise it returns null
     * delete : the function deleting a ressource return an String containing an xml message if the ressource was deleted successfully, else it return an empty String
 
