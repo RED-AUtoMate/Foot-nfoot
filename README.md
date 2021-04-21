@@ -2,7 +2,7 @@
 ### The Projet
 This project was created by the Group Redd for the Licence3 course Web Services at  CY Cergy Paris University 
 ### Redd members
-HOUARI Mourtada : imadhou00@gmail.com
+HOUARI Mourtada : imadhou00@gmail.com <br/>
 HADDADI Rayane : rayanhaddadi1@gmail.com
 KASMI Ghilas : kasmi.ghilas@yahoo.com
 ### The Service
